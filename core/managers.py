@@ -10,7 +10,7 @@ from .utils import validate_username
 
 class AuthorManager(BaseUserManager):
 
-    def create_user(self,username,email,name,passwords,**args):
+    def create_user(self,username,email,name,password,**args):
 
         if not email or not username:
             raise ValidationError('Author name or email address is not present')
@@ -21,7 +21,7 @@ class AuthorManager(BaseUserManager):
         email = self.normalize_email(email=email)
 
         user = self.model(username=username,email=email,name=name,**args)
-        user.set_password(passwords)
+        user.set_password(password)
         user.save(using=self._db)
 
         return user

@@ -35,7 +35,7 @@ class Author(AbstractBaseUser):
         }
     )
 
-    full_name = models.CharField(
+    name = models.CharField(
         verbose_name='name of user',
         max_length=126,
         null=True,

@@ -13,7 +13,7 @@ from ..models import Author as User
 
 @login_required
 def helloworld(request):
-    return HttpResponse('Hello user, I hope you are doing well and i thank you for using this serivce \n -owner: sheokand.sourabh.anil@gmail.com')
+    return HttpResponse(f'Hello {request.user.username}, I hope you are doing well and i thank you for using this serivce \n -owner: sheokand.sourabh.anil@gmail.com')
 
 
 def signup_page(request):
@@ -28,6 +28,7 @@ def signup_page(request):
             user = User.objects.create_user(
                 email=email,
                 username=username,
+                name=name,
                 password=password
             )
             if user:

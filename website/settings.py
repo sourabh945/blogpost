@@ -63,7 +63,9 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
 
-            os.path.join(BASE_DIR,'core/register/templates'),
+            os.path.join(BASE_DIR,'core/register/templates'), # this for login pages
+
+            os.path.join(BASE_DIR,'core/home/templates'), # this is for home pages
 
             
         ],
@@ -140,7 +142,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'core/register/static')
+    os.path.join(BASE_DIR,'core/register/static'), # for registeration pages
+
+
+    os.path.join(BASE_DIR,'core/home/static') # for home pages
 ]
 
 ### configure email service
@@ -157,6 +162,7 @@ EMAIL_USE_TLS = True
 
 AUTH_USER_MODEL = 'core.Author'
 
+LOGIN_URL = 'login'
 
 ### add rest framework token system
 

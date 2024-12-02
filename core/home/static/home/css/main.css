@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Patrick+Hand+SC&display=swap');
+.root {
+    font-family: 'Patrick Hand SC' , cursive;
+}
+    /* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 10px 20px;
+    color: white;
+}
+
+.nav-left button, .nav-right button {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 8px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.nav-left input {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.nav-left button:hover, .nav-right button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Main Body Styling */
+.main-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* Full height minus navbar */
+}
+
+.content-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    text-align: center;
+}

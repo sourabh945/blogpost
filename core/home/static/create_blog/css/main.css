@@ -1,0 +1,36 @@
+/* Input Fields Styling */
+.input-field, .textarea-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.textarea-field {
+    height: 150px;
+    resize: none;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Adjust the Content Box for Input Fields */
+.content-box {
+    width: 50%;
+    padding: 40px;
+    text-align: left;
+}

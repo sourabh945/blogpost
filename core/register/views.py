@@ -32,7 +32,8 @@ def signup_page(request):
                 password=password
             )
             if user:
-                return redirect('login')
+                login(request,user)
+                return redirect('home')
             else:
                 messages.error(request=request,message='Username or email is already exists',extra_tags='login')
                 return redirect('login')
@@ -60,7 +61,7 @@ def login_page(request):
                 """
                 redirect to the user panel
                 """
-                return redirect('hello')
+                return redirect('home')
             
             else:
                 messages.error(request=request,message='Invalid credentials',extra_tags='login')
